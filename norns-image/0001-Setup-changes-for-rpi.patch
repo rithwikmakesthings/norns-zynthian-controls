@@ -18,7 +18,7 @@ index f3d87dc..aaed1ff 100644
 +++ b/config/jackdrc
 @@ -1 +1 @@
 -/usr/bin/jackd -P75 -dalsa -dhw:0 -p128 -n3 -S -r48000
-+/usr/bin/jackd -P75 -dalsa -dhw:CODEC -p128 -n3 -S -r48000
++/usr/bin/jackd -P 70 -t 2000 -s -d alsa -d hw:pisound -r 44100 -p 256 -n 2 -X raw
 diff --git a/config/norns-jack.service b/config/norns-jack.service
 index bb71382..75ea622 100644
 --- a/config/norns-jack.service
@@ -28,7 +28,7 @@ index bb71382..75ea622 100644
  LimitRTPRIO=95
  LimitMEMLOCK=infinity
 -ExecStart=/usr/bin/jackd -R -P 95 -d alsa -d hw:0 -r 48000 -n 3 -p 128 -S -s
-+ExecStart=/usr/bin/jackd -R -P 95 -d alsa -d hw:CODEC -r 48000 -n 3 -p 128 -S -s
++ExecStart=/usr/bin/jackd -P 70 -t 2000 -s -d alsa -d hw:pisound -r 44100 -p 256 -n 2 -X raw
  ExecStartPost=/usr/bin/jack_wait -w -t 10
  TimeoutStopSec=1
  
