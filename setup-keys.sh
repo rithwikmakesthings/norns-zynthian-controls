@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Install WiringPi
-sudo apt-get install -y wiringpi
+git clone https://github.com/zynthian/WiringPi.git
+cd WiringPi
+./build
+cd ..
 
 # Build gpio_keyd.
 cd gpio_keyd
