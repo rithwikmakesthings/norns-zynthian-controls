@@ -4,7 +4,7 @@ Some tweaks needed me make work norns with zynthian encoders setup
 Setup:
 
 ```
-git clone --recursive https://github.com/jnonis/norns-zynthian-controls.git
+git clone --recursive https://github.com/rithwikmakesthings/norns-zynthian-controls.git
 cd norns-zynthian-controls
 ./setup-encoders.sh
 ./setup-keys.sh
